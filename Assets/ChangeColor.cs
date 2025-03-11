@@ -4,31 +4,36 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
 {
-    public GameObject model;
-    public Color color;
-    public Material colorMaterial;
-   
-    // Start is called before the first frame update
+    public GameObject model; // Objeto al que aplicaremos la textura y el color
+    public Material colorMaterial; // Material del objeto
+    private Texture[] textures; // Array donde cargaremos las texturas
+
     void Start()
     {
-    }
+        // Cargar todas las texturas desde "Resources/Texturas"
+        textures = Resources.LoadAll<Texture>("Texturas");
 
-    // Update is called once per frame
-    void Update()
-    {
+        if (textures.Length == 0)
+        {
+            Debug.LogError("No se encontraron texturas en Resources/Texturas");
+        }
     }
 
     public void ChangeColor_BTN()
     {
+        if (model == null || colorMaterial == null || textures.Length == 0) return;
+
+        Renderer renderer = model.GetComponent<Renderer>();
+
+        // Generar un color aleatorio
         Color randomColor = Random.ColorHSV();
+        colorMaterial.color = randomColor;
 
-        // Aplica el color aleatorio al modelo
-        model.GetComponent<Renderer>().material.color = randomColor;
+        // Elegir una textura aleatoria
+        Texture randomTexture = textures[Random.Range(0, textures.Length)];
+        colorMaterial.mainTexture = randomTexture;
 
-        // Si hay un material asignado, cambia su color también
-        if (colorMaterial != null)
-        {
-            colorMaterial.color = randomColor;
-        }
+        // Aplicar el material al modelo
+        renderer.material = colorMaterial;
     }
 }

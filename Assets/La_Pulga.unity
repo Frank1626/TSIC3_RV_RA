@@ -254,7 +254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1965423864}
-  color: {r: 0, g: 0, b: 0, a: 0}
   colorMaterial: {fileID: 2100000, guid: d589966bcf1bfcc458d4cc1ba4907ece, type: 2}
 --- !u!114 &48328500
 MonoBehaviour:
@@ -728,7 +727,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f8943fd2b4cb59249af05c77b397965f, type: 2}
+      objectReference: {fileID: 2100000, guid: d589966bcf1bfcc458d4cc1ba4907ece, type: 2}
     - target: {fileID: 215137877380621788, guid: 6719d00bba5e2344aa88d8e241add85f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -743,7 +742,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f8943fd2b4cb59249af05c77b397965f, type: 2}
+      objectReference: {fileID: 2100000, guid: be0997ccefb91644dbb535768848cdd9, type: 2}
     - target: {fileID: 4573756903802727086, guid: 6719d00bba5e2344aa88d8e241add85f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
