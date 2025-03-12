@@ -25,9 +25,12 @@ public class ChangeColor : MonoBehaviour
 
         Renderer renderer = model.GetComponent<Renderer>();
 
-        // Generar un color aleatorio
-        Color randomColor = Random.ColorHSV();
-        colorMaterial.color = randomColor;
+        // Generar un color aleatorio brillante y saturado
+        Color randomColor = Random.ColorHSV(0f, 1f, 0.6f, 1f, 0.7f, 1f);
+
+        // Establecer el color correctamente sin afectar transparencia
+        colorMaterial.SetColor("_Color", randomColor); // Para Standard Shader
+        // colorMaterial.SetColor("_BaseColor", randomColor); // Para URP Shader
 
         // Elegir una textura aleatoria
         Texture randomTexture = textures[Random.Range(0, textures.Length)];
