@@ -213,13 +213,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: lapulga
+  mTrackableName: marcador1
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/realidadAu.xml
-  mAspectRatio: 1.055556
+  mAspectRatio: 1.011
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.055556
+  mHeight: 1.011
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 48328497}
   mHiddenRoot: {fileID: 0}
-  mTargetName: lapulga
+  mTargetName: marcador1
   mDatasetName: Vuforia/realidadAu.xml
   mCastedBehaviour: {fileID: 48328497}
   mMeshFilter: {fileID: 0}
